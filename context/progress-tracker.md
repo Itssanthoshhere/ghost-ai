@@ -4,19 +4,19 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Feature 01: Design System
+- Feature 02: TBD
 
 ## Current Goal
 
-- Install and configure shadcn/ui with dark theme tokens, add 7 UI primitive components, lucide-react, and the cn() helper.
+- Define the immediate implementation goal here.
 
 ## Completed
 
-- None yet.
+- Feature 01: Design System — shadcn/ui installed and configured for Tailwind v4, dark-only theme tokens in globals.css, Button/Card/Dialog/Input/Tabs/Textarea/ScrollArea components added to components/ui/, lucide-react installed, lib/utils.ts cn() helper in place. TypeScript compiles clean.
 
 ## In Progress
 
-- Feature 01: Design System - installing shadcn/ui, configuring dark theme tokens in globals.css, adding Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea, lucide-react, and lib/utils.ts cn() helper.
+- None yet.
 
 ## Next Up
 
@@ -28,9 +28,12 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Architecture Decisions
 
-- shadcn/ui over Tailwind v4 (CSS-based token config via @theme inline in globals.css, no tailwind.config.js)
- 
+- shadcn/ui over Tailwind v4 (CSS-based token config via @theme inline in globals.css, no tailwind.config.js).
+- Dark-only theme: all shadcn :root variables set to dark values directly — no .dark class switching.
+- Do not modify generated components/ui/\* files after shadcn installation.
+
 ## Session Notes
 
 - Using Next.js 16.2.4 with React 19 and Tailwind CSS v4.
-- Do not modify generated components/ui/* files after shadcn installation.
+- shadcn version 4.5.0 was used; it auto-detected Tailwind v4.
+- lucide-react ^1.11.0 installed as a direct dependency.

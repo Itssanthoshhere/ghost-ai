@@ -4,11 +4,11 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Not started
+- Feature 01: Design System
 
 ## Current Goal
 
-- Define the immediate implementation goal here.
+- Install and configure shadcn/ui with dark theme tokens, add 7 UI primitive components, lucide-react, and the cn() helper.
 
 ## Completed
 
@@ -16,20 +16,21 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## In Progress
 
-- None yet.
+- Feature 01: Design System - installing shadcn/ui, configuring dark theme tokens in globals.css, adding Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea, lucide-react, and lib/utils.ts cn() helper.
 
 ## Next Up
 
-- Add the next planned feature unit here.
+- Feature 02 (TBD)
 
 ## Open Questions
 
-- Add unresolved product or implementation questions here.
+- None yet.
 
 ## Architecture Decisions
 
-- Add decisions that affect the system design or data model.
-
+- shadcn/ui over Tailwind v4 (CSS-based token config via @theme inline in globals.css, no tailwind.config.js)
+ 
 ## Session Notes
 
-- Add context needed to resume work in the next session.
+- Using Next.js 16.2.4 with React 19 and Tailwind CSS v4.
+- Do not modify generated components/ui/* files after shadcn installation.

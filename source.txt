@@ -7,3 +7,13 @@ npx shadcn@latest add button card dialog input tabs textarea scroll-area
 npm install lucide-react
 
 npm install clsx tailwind-merge
+
+---
+
+Auth - Clerk
+
+npm install @clerk/nextjs
+
+npx skills add clerk/skills
+
+npm install @clerk/themes

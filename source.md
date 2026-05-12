@@ -91,3 +91,37 @@ npx prisma generate
 ```bash
 npx skills add prisma/skills
 ```
+
+---
+
+# Liveblocks Setup
+
+## Install Liveblocks Packages
+
+```bash
+npm install @liveblocks/client @liveblocks/react @liveblocks/react-ui @liveblocks/react-flow @xyflow/react
+```
+
+---
+
+## Initialize Liveblocks
+
+```bash
+npx create-liveblocks-app@latest --init --framework react
+```
+
+---
+
+## Install Liveblocks Server SDK
+
+```bash
+npm install @liveblocks/node
+```
+---
+
+## Liveblocks Skills (Optional)
+
+```bash
+npx skills add liveblocks/skills
+```
+

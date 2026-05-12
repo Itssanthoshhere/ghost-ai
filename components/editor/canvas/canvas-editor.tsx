@@ -96,15 +96,18 @@ export function CanvasEditor() {
   );
 
   return (
-    <div ref={wrapperRef} className="h-full w-full">
+    <div
+      ref={wrapperRef}
+      className="relative h-full w-full"
+      onDragOver={onDragOver}
+      onDrop={onDrop}
+    >
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
-        onDragOver={onDragOver}
-        onDrop={onDrop}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         connectionMode={ConnectionMode.Loose}
@@ -115,15 +118,15 @@ export function CanvasEditor() {
           variant={BackgroundVariant.Dots}
           gap={24}
           size={1.5}
-          className="opacity-30"
+          color="var(--color-border-subtle)"
         />
         <MiniMap
           className="bg-bg-surface! border! border-border-subtle! rounded-xl!"
           maskColor="var(--color-bg-base)"
           nodeColor="var(--color-accent-primary)"
         />
-        <ShapePanel />
       </ReactFlow>
+      <ShapePanel />
     </div>
   );
 }

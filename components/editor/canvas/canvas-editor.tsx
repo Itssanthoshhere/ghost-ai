@@ -11,13 +11,10 @@ import {
 import "@xyflow/react/dist/style.css";
 import { useReactFlow } from "@xyflow/react";
 import { useLiveblocksFlow } from "@liveblocks/react-flow";
-import { useMutation } from "@liveblocks/react";
-import { LiveObject } from "@liveblocks/client";
 import type { CanvasNode, CanvasEdge, NodeShape } from "@/types/canvas";
 import { NODE_COLORS } from "@/types/canvas";
 import { CanvasNodeComponent } from "@/components/editor/canvas/canvas-node";
 import { ShapePanel } from "@/components/editor/canvas/shape-panel";
-import type { LiveblocksNode } from "@liveblocks/react-flow";
 
 const nodeTypes = { canvasNode: CanvasNodeComponent };
 const edgeTypes = {};
@@ -34,24 +31,6 @@ export function CanvasEditor() {
 
   const { screenToFlowPosition } = useReactFlow();
   const wrapperRef = useRef<HTMLDivElement>(null);
-
-  const addNode = useMutation(({ storage }, newNode: CanvasNode) => {
-    const liveNode = new LiveObject({
-      id: newNode.id,
-      type: newNode.type,
-      position: newNode.position,
-      data: new LiveObject({
-        label: newNode.data.label,
-        color: newNode.data.color,
-        shape: newNode.data.shape,
-      }),
-      width: newNode.width,
-      height: newNode.height,
-    });
-    storage
-      .get("nodes")
-      .set(newNode.id, liveNode as unknown as LiveblocksNode<CanvasNode>);
-  }, []);
 
   const onDragOver = useCallback((event: React.DragEvent) => {
     event.preventDefault();
@@ -90,9 +69,9 @@ export function CanvasEditor() {
         height: payload.size.height,
       };
 
-      addNode(newNode);
+      onNodesChange([{ type: "add", item: newNode }]);
     },
-    [screenToFlowPosition, addNode],
+    [screenToFlowPosition, onNodesChange],
   );
 
   return (

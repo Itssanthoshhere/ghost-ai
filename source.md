@@ -22,7 +22,7 @@ npx shadcn@latest add button card dialog input tabs textarea scroll-area
 
 ---
 
-## UI Utilities
+# UI Utilities
 
 ```bash
 npm install lucide-react
@@ -36,19 +36,19 @@ npm install clsx tailwind-merge
 
 # Authentication — Clerk
 
-Install Clerk:
+## Install Clerk
 
 ```bash
 npm install @clerk/nextjs
 ```
 
-Install Clerk themes:
+## Install Clerk Themes
 
 ```bash
 npm install @clerk/themes
 ```
 
-(Optional) Add Clerk skills:
+## Clerk Skills (Optional)
 
 ```bash
 npx skills add clerk/skills
@@ -117,6 +117,7 @@ npx create-liveblocks-app@latest --init --framework react
 ```bash
 npm install @liveblocks/node
 ```
+
 ---
 
 ## Liveblocks Skills (Optional)
@@ -125,3 +126,22 @@ npm install @liveblocks/node
 npx skills add liveblocks/skills
 ```
 
+---
+
+# Vercel Blob Storage
+
+## Install Vercel Blob SDK
+
+```bash
+npm install @vercel/blob
+```
+
+---
+
+## Environment Variable
+
+Add to `.env.local`:
+
+```env
+BLOB_READ_WRITE_TOKEN=vercel_blob_rw_xxxxxxxxx
+```

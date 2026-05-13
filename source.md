@@ -24,9 +24,13 @@ npx shadcn@latest add button card dialog input tabs textarea scroll-area
 
 # UI Utilities
 
+Install icons:
+
 ```bash
 npm install lucide-react
 ```
+
+Install utility libraries:
 
 ```bash
 npm install clsx tailwind-merge
@@ -144,4 +148,91 @@ Add to `.env.local`:
 
 ```env
 BLOB_READ_WRITE_TOKEN=vercel_blob_rw_xxxxxxxxx
+```
+
+---
+
+# Trigger.dev Setup
+
+## Initialize Trigger.dev Project
+
+```bash
+npx trigger.dev@latest init -p proj_gmubdgvweoofrpdbyjng
+```
+
+---
+
+## Install Trigger.dev Skills
+
+```bash
+npx skills add triggerdotdev/skills
+```
+
+---
+
+## Initialize Trigger.dev in Project
+
+```bash
+npx trigger.dev@latest init
+```
+
+Choose:
+
+- Trigger directory → `trigger`
+- Example → `Simple (Hello World)`
+
+---
+
+## Start Trigger.dev Local Worker
+
+```bash
+npx trigger.dev@latest dev
+```
+
+Expected output:
+
+```bash
+○ Local worker ready [node]
+```
+
+---
+
+# Additional AI Sidebar Dependencies
+
+Install markdown rendering:
+
+```bash
+npm install react-markdown
+```
+
+Install Trigger.dev React hooks:
+
+```bash
+npm install @trigger.dev/react-hooks
+```
+
+Install AI SDK:
+
+```bash
+npm install @ai-sdk/google ai
+```
+
+---
+
+# Current Ghost AI Stack
+
+```txt
+Next.js 16
+TypeScript
+Tailwind CSS
+shadcn/ui
+Clerk Authentication
+Prisma ORM
+PostgreSQL
+Liveblocks Realtime Collaboration
+React Flow Canvas
+Vercel Blob Storage
+Trigger.dev Background Jobs
+React Markdown Rendering
+Google AI SDK
 ```

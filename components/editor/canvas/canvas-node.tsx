@@ -213,7 +213,7 @@ export function CanvasNodeComponent({
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
       e.stopPropagation();
-      if (e.key === "Escape") {
+      if (e.key === "Escape" || e.key === "Enter") {
         commitEdit();
       }
     },

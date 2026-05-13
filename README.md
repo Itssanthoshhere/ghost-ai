@@ -31,7 +31,7 @@
   <img src="https://img.shields.io/badge/🚀%20Live%20Demo-black?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
 
-<a href="https://github.com/Itssanthoshhere/ghost-ai" target="_blank">
+<a href="https://github.com/Itssanthoshhere/Ghost-Arc" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
@@ -270,7 +270,7 @@ Downloadable Technical Spec
 # 📂 Project Structure
 
 ```bash
-ghost-ai/
+Ghost-Arc/
 │
 ├── app/
 │   ├── api/                  # API route handlers
@@ -323,9 +323,9 @@ Make sure you have installed:
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/Itssanthoshhere/ghost-ai.git
+git clone https://github.com/Itssanthoshhere/Ghost-Arc.git
 
-cd ghost-ai
+cd Ghost-Arc
 ```
 
 ---
